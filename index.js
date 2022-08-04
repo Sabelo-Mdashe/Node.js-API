@@ -12,9 +12,9 @@ app.use(cors()); // Dont let local development give errors
 
 // Create '/' (home) route
 
-app.get("/", (req, res) => {
-  res.json({ msg: "Welcome" });
-});
+// app.get("/", (req, res) => {
+//   res.json({ msg: "Welcome" });
+// });
 
 app.use(express.static("public"));
 
