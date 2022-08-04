@@ -1,4 +1,4 @@
-fetch("http://localhost:6969/users")
+fetch("https://nodejs-api-sql.herokuapp.com/users")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((i) => {
