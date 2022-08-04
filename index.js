@@ -16,6 +16,12 @@ app.get("/", (req, res) => {
   res.json({ msg: "Welcome" });
 });
 
+app.use(express.static("public"));
+
+app.get("/", function (req, res) {
+  res.sendFile(_dirname + "/" + "index.html");
+});
+
 // Set up app listening for API calls
 
 app.listen(app.get("port"), () => {
@@ -26,7 +32,13 @@ app.listen(app.get("port"), () => {
 // Importing Route
 
 const userRoute = require("./routes/userRoutes");
+const productRoute = require("./routes/productRoutes");
+const categoryRoute = require("./routes/categoryRoutes");
+const ordersRoute = require("./routes/ordersRoutes");
 
 // Using Route
 
 app.use("/users", userRoute);
+app.use("/products", productRoute);
+app.use("/categories", categoryRoute);
+app.use("/orders", ordersRoute);

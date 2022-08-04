@@ -1,0 +1,21 @@
+nav {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+}
+
+.remember {
+  display: flex;
+}
+
+.form_footer {
+  display: flex;
+  justify-content: space-between;
+}
